@@ -34,7 +34,7 @@ class Ball {
     
     if(by + bd/2 > myPaddle.y - myPaddle.paddleHeight && by + bd/2 < myPaddle.y && myPaddle.x + myPaddle.paddleWidth >= bx && myPaddle.x - myPaddle.paddleWidth <= bx) { // Paddle bounding
       bvy = ( (by) - (myPaddle.y) ) * 0.25;
-      bvx = ( (bx) - (myPaddle.x) ) * (0.25 * min(1, max( 0,  abs( bx - myPaddle.x ) / (myPaddle.paddleWidth / 2) ) ) ); // Big old formula which calculates angle and speed based on distance to edge of paddle
+      bvx = ( (bx) - (myPaddle.x) ) * (0.25 * min(1, max( 0, abs( bx - myPaddle.x ) / (myPaddle.paddleWidth / 2) ) ) ); // Big old formula which calculates angle and speed based on distance to edge of paddle
     }
   }
 }

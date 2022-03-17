@@ -15,5 +15,4 @@ class Paddle {
   void show() {
     image(paddleImage, x, y);
   }
-  
 }

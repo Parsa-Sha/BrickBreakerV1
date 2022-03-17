@@ -4,20 +4,16 @@ class Brick {
   float x, y;
   int hp, brickX, brickY;
   PImage currentBrickImage;
-  boolean inXRange, inYRange;
   
   //2. Constructor
   Brick() {
     x = 0;
     y = 0;
     hp = 1;
-    brickX = 32;
-    brickY = 16;
     currentBrickImage = currentBrick;    
   }
 
   //3. Behaviour Functions
-
   void show() {
     if (hp > 0) image(currentBrickImage, x, y);
   }
