@@ -28,7 +28,8 @@ class Brick {
      bvy = -bvy;
     }
     */
-     
+    
+    /*
     if (hp > 0 && bx + bd/2 > x - brickX/2 && bx - bd/2 < x + brickX/2 && by + bd/2 > y - brickY/2 && by - bd/2 < y + brickY/2) { // Once we know it is hit, we check which side is hit
       if(abs(bvx) > abs(bvy)) { // Velocity slope is greater than 1, therefore reverse X
         bvx = -bvx;
@@ -42,7 +43,20 @@ class Brick {
       bricksAlive--;
     } 
   }
-  
+  */
+
+    if (hp > 0 && bx + bd/2 > x - brickX/2 && bx - bd/2 < x + brickX/2 && by + bd/2 > y - brickY/2 && by - bd/2 < y + brickY/2) { // Once we know it is hit, we check which side is hit
+      if(bx + bd/2 < x - (brickX/2 + 1)) { // Velocity slope is greater than 1, therefore reverse X
+        bvx = -bvx;
+      } else {
+        bvy = -bvy;
+      }
+      hp--;
+      bricksAlive--;
+    } 
+  }
+
+
   void reset() { // Resetting bricks when game is finished
     hp = 1;
   }
